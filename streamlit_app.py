@@ -1,3 +1,4 @@
+
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,6 +57,11 @@ ax.plot_surface(xx, yy, zz, color='gray', alpha=0.5)
 
 # Display the plot using Streamlit
 st.pyplot(fig)
+
+
+
+
+
 
 
 
