@@ -6,7 +6,8 @@ from sklearn.svm import LinearSVC
 
 
 # Streamlit App
-st.title('3D Scatter Plot with Separating Hyperplane')
+st.title('3D SVM with streamlit')
+st.text("使用滑桿調整分類的距離閾值，可以即時顯示3D散點圖和超平面")
 
 # Sidebar for adjusting semi-major and semi-minor axis
 semi_major_axis = st.slider('Semi-Major Axis', min_value=1.0, max_value=10.0, value=5.0, step=0.1)
@@ -39,7 +40,7 @@ intercept = clf.intercept_
 # Create 3D scatter plot
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
-ax.scatter(x1[Y==0], x2[Y==0], x3[Y==0], c='blue', marker='o', label='Y=0')
+ax.scatter(x1[Y==0], x2[Y==0], x3[Y==0], c='purple', marker='o', label='Y=0')
 ax.scatter(x1[Y==1], x2[Y==1], x3[Y==1], c='red', marker='s', label='Y=1')
 ax.set_xlabel('x1')
 ax.set_ylabel('x2')
